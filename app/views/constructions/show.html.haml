@@ -1,0 +1,45 @@
+%main#main
+  / ======= Breadcrumbs =======
+  %section#breadcrumbs.breadcrumbs
+    .container
+      .d-flex.justify-content-between.align-items-center
+        %h2 Construction
+        %ol
+          %li
+            %a{:href => "index.html"} Home
+          %li 施工事例
+  / End Breadcrumbs
+  / ======= Portfolio Details Section =======
+  %section#portfolio-details.portfolio-details
+    .container
+      .row
+        .col-lg-8
+          %h2.portfolio-title #{@construction.name}
+          .owl-carousel.portfolio-details-carousel
+            %img.img-fluid{:alt => "", :src => "/img/fujimoto1.jpg"}/
+            %img.img-fluid{:alt => "", :src => "/img/fujimoto2.jpg"}/
+            %img.img-fluid{:alt => "", :src => "assets/img/portfolio/portfolio-details-3.jpg"}/
+        .col-lg-4.portfolio-info
+          %h3 #{@construction.name}
+          %ul
+            %li
+              %strong> 地域
+              \: #{@construction.area}
+            %li
+              %strong> タイプ
+              \: #{@construction.name}
+            %li
+              %strong> 竣工
+              \: #{@construction.built_year}
+            -# %li
+            -#   %strong> Project URL
+            -#   \:
+            -#   %a{:href => "#"} www.example.com
+          %p
+            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+  / End Portfolio Details Section
+/ End #main
+%section#portfolio-details.portfolio-details
+  .container
+    .row
+      = link_to 'EDIT', edit_construction_path(@construction), class: 'bottun'

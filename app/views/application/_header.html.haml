@@ -1,0 +1,23 @@
+/ ======= Header =======
+%header#header.fixed-top
+  .container.d-flex.align-items-center
+    %h1.logo
+      = link_to 'AIO. JAPAN', root_path
+    / Uncomment below if you prefer to use an image logo
+    / <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+    %nav.nav-menu.d-none.d-lg-block
+      %ul
+        %li.active
+          = link_to 'ホーム', root_path
+        %li
+          = link_to '会社案内', about_path
+        %li
+          = link_to '施工事例', constructions_path
+        %li
+          = link_to 'お問い合わせ', contact_path
+    / .nav-menu
+    -# %a.get-started-btn.ml-auto{:href => "index.html"} Get Started
+    %i.bx.bxs-envelope.margin-10px-right.ml-auto
+      = link_to "miguel@mydanservices.com", "mailto:miguel@mydanservices.com"
+    %i.bx.bxs-phone
+      = link_to "08014406947", "tel:08014406947"

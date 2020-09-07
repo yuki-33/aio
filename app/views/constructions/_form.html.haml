@@ -1,0 +1,39 @@
+%main#main
+  / ======= Breadcrumbs =======
+  %section#breadcrumbs.breadcrumbs
+    .container
+      .d-flex.justify-content-between.align-items-center
+        %h2 新規作成
+        -# %ol
+        -#   %li
+        -#     = link_to 'Home', root_path
+        -#   %li 個人情報保護方針
+  / End Breadcrumbs
+  / ======= Privacy Section =======
+  %section#contact.contact
+    .container
+      %div.privacy
+        =bootstrap_form_with model: @construction, url: constructions_path, local: true do |f|
+          =f.text_field :name
+          =f.text_field :design
+          =f.text_field :area
+          =f.text_field :built_year
+          -# =f.collection_select :type_id, Type.all, :id, :name, include_blank: true, class: 'form-control'
+          =f.text_area :introduction
+          =f.file_field :image
+          -# =f.collection_check_boxes :category_ids, Category.all, :id, :name, class: 'form-contral'
+          -# =f.fields_for :image do |field|
+          -#   .js-form-group
+          -#     =field.hidden_field :id
+          -#     .row
+          -#       .col-sm-6
+          -#         =field.file_field :menu
+          -# .form-group
+          -#   %span.btn.btn-outline-info.btn-sm.js-add-form
+          -#     %i.fa.fa-plus
+          -#     %span="写真を追加"
+          .contact
+            .php-email-form
+              =f.submit '登録', class: 'button'
+        %br
+        =link_to "Back to the list", root_path
