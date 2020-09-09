@@ -4,34 +4,39 @@
     %ol#hero-carousel-indicators.carousel-indicators
     .carousel-inner{:role => "listbox"}
       / Slide 1
-      .carousel-item.active{:style => "background-image: url(/img/fujimoto1.jpg)"}
+      .carousel-item.active{:style => "background-image: url(/img/condo1.jpg)"}
         .carousel-container
           .container
             %h2.animate__animated.animate__fadeInDown
               Welcome to
               %span AIO. JAPAN
             %h4.animate__animated.animate__fadeInDown ようこそ AIO. JAPAN へ
-            %p.animate__animated.animate__fadeInUp すべての建築にかかわる仕事を丁寧に.　建築業務 "Construction", デザイン "Design", リフォーム "Renovation", さらには介護住宅 "Care" に至るところまで幅広く対応し, 仕事後も末永いケアを.
+            %p.animate__animated.animate__fadeInUp
+              すべての建築にかかわる仕事を丁寧に.
+              %br
+              建築業務 "Construction", デザイン "Design", リフォーム "Renovation", さらには介護住宅 "Care" に至るところまで幅広く対応し, 仕事後も末永いケアを.
             %a.btn-get-started.animate__animated.animate__fadeInUp.scrollto{:href => "#about"} Read More
       / Slide 2
       .carousel-item{:style => "background-image: url(/img/fujimoto2.jpg)"}
         .carousel-container
           .container
-            %h2.animate__animated.animate__fadeInDown Simple
-            %p.animate__animated.animate__fadeInUp 全てと調和するシンプルなデザインと設計
+            %h2.animate__animated.animate__fadeInDown Purity
+            %p.animate__animated.animate__fadeInUp 全てと調和する『無垢（むく）』なデザインと設計
             %a.btn-get-started.animate__animated.animate__fadeInUp.scrollto{:href => "#about"} Read More
       / Slide 3
       .carousel-item{:style => "background-image: url(/img/fukunishi3.jpg)"}
         .carousel-container
           .container
             %h2.animate__animated.animate__fadeInDown Modern
-            %p.animate__animated.animate__fadeInUp 常に現代の新しい知識と技術
+            %p.animate__animated.animate__fadeInUp 常に新しい現代の知識と技術
+            %a.btn-get-started.animate__animated.animate__fadeInUp.scrollto{:href => "#about"} Read More
       / Slide 4
       .carousel-item{:style => "background-image: url(/img/fukunishi1.jpg)"}
         .carousel-container
           .container
             %h2.animate__animated.animate__fadeInDown Create Your Original
             %p.animate__animated.animate__fadeInUp あなたのオリジナルを創り上げる
+            %a.btn-get-started.animate__animated.animate__fadeInUp.scrollto{:href => "#about"} Read More
     %a.carousel-control-prev{"data-slide" => "prev", :href => "#heroCarousel", :role => "button"}
       %span.carousel-control-prev-icon.bx.bxs-chevron-left{"aria-hidden" => "true"}
       %span.sr-only Previous
@@ -55,22 +60,19 @@
             介護リフォームにこだわる工務店
         .col-lg-6.pt-4.pt-lg-0
           %p
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+            　AIO JAPANは、姫路を中心に新築はもちろん、リフォーム、古民家再生、学校校舎までも手掛ける総合建築工務店. 常にお客様の想いに寄り添い、理想をカタチにすることをお客様と共に努力していきます.
           %ul
             %li
-              %i.ri-check-double-line
-              Ullamco laboris nisi ut aliquip ex ea commodo consequa
+              %i.bx.bx-navigation
+              素材を生かしたデザイン
             %li
-              %i.ri-check-double-line
-              Duis aute irure dolor in reprehenderit in voluptate velit
+              %i.bx.bx-navigation
+              想いにこだわる
             %li
-              %i.ri-check-double-line
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          %p.font-italic
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+              %i.bx.bx-navigation
+              オリジナルを創り上げる
+          %p
+            幅広い層のお客様からの経験を活かし、さらに新しい安心と快適な “建築と暮らし” を提供させていただきます.
   / End About Section
   / ======= Clients Section =======
   %section#clients.clients.section-bg
@@ -101,25 +103,28 @@
             %i.bx.bx-building-house
             %h4
               %a{:href => "#"} Construction　-総合建築-
-            %p Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+            %p 住宅、集合住宅、店舗、古民家そして学校校舎まで、幅広い分野で対応させていただきます.
         .col-md-6.mt-4.mt-md-0
           .icon-box
             %i.bx.bx-home
             %h4
-              %a{:href => "#"} Renovetion　-リフォーム-
-            %p Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata
+              %a{:href => "#"} Technique　-FB工法を用いた快適な住まい-
+            %p FB工法を用いた『高断熱・高気密』の居住空間をつくりあげることで、夏は涼しく冬は暖かい快適な暮らしを実現いたします. この工法と経験豊かな設計者により、省エネで安心な住まいをご提供いたします.
         .col-md-6.mt-4.mt-md-0
           .icon-box
-            %i.bx.bx-aperture
+            %i.bx.bx-pyramid
             %h4
-              %a{:href => "#"} Design　-デザイン-
-            %p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+              %a{:href => "#"} Purity　-無垢なデザイン-
+            %p
+              『無垢』とは、汚れなく、純真であること.
+              %br
+              この無垢な混じりけのない素材を使い、その美しさを生かしたデザインをご提案いたします.
         .col-md-6.mt-4.mt-md-0
           .icon-box
             %i.bx.bx-donate-heart
             %h4
               %a{:href => "#"} 介護に関するリフォームアドバイス
-            %p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            %p 看護師、ケアマネージャーの資格を持つアドバイザーから、新築やリフォームの際に介護に関して丁寧なアドバイスをさせていただくことができます.
   / End Services Section
   / ======= Portfolio Section =======
   %section#portfolio.portfolio
@@ -139,12 +144,12 @@
           .portfolio-wrap
             %img.img-fluid{:alt => "", :src => "/img/fujimoto1.jpg"}/
             .portfolio-info
-              %h4 フジモト　ハウス
+              -# %h4 フジモト　ハウス
               %p Fujimoto House
               .portfolio-links
                 %a.venobox{"data-gall" => "portfolioGallery", :href => "/img/fujimoto1.jpg", :title => "Fujimoto House"}
                   %i.bx.bx-plus
-                %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
+                %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => construction_path(1), :title => "Portfolio Details"}
                   %i.bx.bx-link
         .col-lg-4.col-md-6.portfolio-item.filter-card
           .portfolio-wrap
@@ -155,7 +160,7 @@
               .portfolio-links
                 %a.venobox{"data-gall" => "portfolioGallery", :href => "/img/fukunishi1.jpg", :title => "Card 3"}
                   %i.bx.bx-plus
-                %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
+                %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => construction_path(2), :title => "Portfolio Details"}
                   %i.bx.bx-link
         .col-lg-4.col-md-6.portfolio-item.filter-app
           .portfolio-wrap
@@ -234,5 +239,10 @@
                   %i.bx.bx-plus
                 %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
                   %i.bx.bx-link
+      .row
+        .col-lg-12.read_more
+          = link_to constructions_path do
+            %h3 Read More
+            -# %i.bx.bx-chevron-right.bx-fade-right
   / End Portfolio Section
 / End #main

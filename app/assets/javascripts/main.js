@@ -92,13 +92,19 @@
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
+      // added
+      $('#message').addClass('message-scrolled');
     } else {
       $('#header').removeClass('header-scrolled');
+      // added
+      $('#message').removeClass('message-scrolled');
     }
   });
 
   if ($(window).scrollTop() > 100) {
     $('#header').addClass('header-scrolled');
+    // added
+    $('#message').addClass('message-scrolled');
   }
 
   // Intro carousel

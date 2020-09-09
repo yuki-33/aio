@@ -24,114 +24,23 @@
             %li{"data-filter" => ".filter-web"} 店舗
       .row.portfolio-container
         -@constructions.each do |construction|
-          .col-lg-4.col-md-6.portfolio-item.filter-app
+          .col-lg-4.col-md-6.portfolio-item.filter-card
             .portfolio-wrap
               =link_to construction_path(construction) do
-                -# =image_tag construction.image_url
-                %img.img-fluid{:alt => "", :src => "/img/fujimoto1.jpg"}/
+                =image_tag construction.image_url, class: 'img-fluid'
               .portfolio-info
-                -# %h4 "#{@constructions.name}"
                 %p #{construction.name}
                 .portfolio-links
-                  -# =image_tag @construction.image_url
+                  = link_to construction_path(construction) do
+                    %i.bx.bx-link
                   -# %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-1.jpg", :title => "App 1"}
                   -#   %i.bx.bx-plus
-                  = link_to construction_path(construction), class: 'venobox' do
-                    %i.bx.bx-link
-                  -# %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
-
-        -#
-        -# .col-lg-4.col-md-6.portfolio-item.filter-web
-        -#   .portfolio-wrap
-        -#     %img.img-fluid{:alt => "", :src => "assets/img/portfolio/portfolio-2.jpg"}/
-        -#     .portfolio-info
-        -#       %h4 Web 3
-        -#       %p Web
-        -#       .portfolio-links
-        -#         %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-2.jpg", :title => "Web 3"}
-        -#           %i.bx.bx-plus
-        -#         %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
-        -#           %i.bx.bx-link
-        -# .col-lg-4.col-md-6.portfolio-item.filter-app
-        -#   .portfolio-wrap
-        -#     %img.img-fluid{:alt => "", :src => "assets/img/portfolio/portfolio-3.jpg"}/
-        -#     .portfolio-info
-        -#       %h4 App 2
-        -#       %p App
-        -#       .portfolio-links
-        -#         %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-3.jpg", :title => "App 2"}
-        -#           %i.bx.bx-plus
-        -#         %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
-        -#           %i.bx.bx-link
-        -# .col-lg-4.col-md-6.portfolio-item.filter-card
-        -#   .portfolio-wrap
-        -#     %img.img-fluid{:alt => "", :src => "assets/img/portfolio/portfolio-4.jpg"}/
-        -#     .portfolio-info
-        -#       %h4 Card 2
-        -#       %p Card
-        -#       .portfolio-links
-        -#         %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-4.jpg", :title => "Card 2"}
-        -#           %i.bx.bx-plus
-        -#         %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
-        -#           %i.bx.bx-link
-        -# .col-lg-4.col-md-6.portfolio-item.filter-web
-        -#   .portfolio-wrap
-        -#     %img.img-fluid{:alt => "", :src => "assets/img/portfolio/portfolio-5.jpg"}/
-        -#     .portfolio-info
-        -#       %h4 Web 2
-        -#       %p Web
-        -#       .portfolio-links
-        -#         %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-5.jpg", :title => "Web 2"}
-        -#           %i.bx.bx-plus
-        -#         %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
-        -#           %i.bx.bx-link
-        -# .col-lg-4.col-md-6.portfolio-item.filter-app
-        -#   .portfolio-wrap
-        -#     %img.img-fluid{:alt => "", :src => "assets/img/portfolio/portfolio-6.jpg"}/
-        -#     .portfolio-info
-        -#       %h4 App 3
-        -#       %p App
-        -#       .portfolio-links
-        -#         %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-6.jpg", :title => "App 3"}
-        -#           %i.bx.bx-plus
-        -#         %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
-        -#           %i.bx.bx-link
-        -# .col-lg-4.col-md-6.portfolio-item.filter-card
-        -#   .portfolio-wrap
-        -#     %img.img-fluid{:alt => "", :src => "assets/img/portfolio/portfolio-7.jpg"}/
-        -#     .portfolio-info
-        -#       %h4 Card 1
-        -#       %p Card
-        -#       .portfolio-links
-        -#         %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-7.jpg", :title => "Card 1"}
-        -#           %i.bx.bx-plus
-        -#         %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
-        -#           %i.bx.bx-link
-        -# .col-lg-4.col-md-6.portfolio-item.filter-card
-        -#   .portfolio-wrap
-        -#     %img.img-fluid{:alt => "", :src => "assets/img/portfolio/portfolio-8.jpg"}/
-        -#     .portfolio-info
-        -#       %h4 Card 3
-        -#       %p Card
-        -#       .portfolio-links
-        -#         %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-8.jpg", :title => "Card 3"}
-        -#           %i.bx.bx-plus
-        -#         %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
-        -#           %i.bx.bx-link
-        -# .col-lg-4.col-md-6.portfolio-item.filter-web
-        -#   .portfolio-wrap
-        -#     %img.img-fluid{:alt => "", :src => "assets/img/portfolio/portfolio-9.jpg"}/
-        -#     .portfolio-info
-        -#       %h4 Web 3
-        -#       %p Web
-        -#       .portfolio-links
-        -#         %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-9.jpg", :title => "Web 3"}
-        -#           %i.bx.bx-plus
-        -#         %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => "portfolio-details.html", :title => "Portfolio Details"}
-        -#           %i.bx.bx-link
+                  -# %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => construction_path(construction), :title => "Portfolio Details"}
+                  -#   %i.bx.bx-link
   / End Portfolio Section
 / End #main
-%section#portfolio-details.portfolio-details
-  .container
-    .row
-      = link_to 'NEW', new_construction_path, class: 'bottun'
+-if user_signed_in?
+  %section#portfolio-details.portfolio-details
+    .container
+      .row
+        = link_to 'NEW', new_construction_path, class: 'bottun'

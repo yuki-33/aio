@@ -24,13 +24,13 @@
             .email
               %i.bx.bxs-envelope
               %h4 Email:
-              %p info@example.com
+              = link_to "aio.japan.oo@gmail.com", "mailto:aio.japan.00@gmail.com"
             .phone
               %i.bx.bxs-phone
               %h4 Call:
-              %p 079-299-5390
+              = link_to "08014406947", "tel:08014406947"
         .col-lg-8.mt-5.mt-lg-0
-          =form_with model: @contact, url: contact_path, method: :post, local: true, class: 'php-email-form' do |f|
+          =form_with model: @contact, url: {controller: "home", action: "inquiry" }, method: :post, local: true, class: 'php-email-form' do |f|
             .form-row
               .col-md-6.form-group
                 =f.text_field :name, placeholder: "Name", class: 'form-control'

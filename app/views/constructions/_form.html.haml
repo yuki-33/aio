@@ -13,7 +13,7 @@
   %section#contact.contact
     .container
       %div.privacy
-        =bootstrap_form_with model: @construction, url: constructions_path, local: true do |f|
+        =bootstrap_form_with model: @construction, local: true, multipart: true do |f|
           =f.text_field :name
           =f.text_field :design
           =f.text_field :area
@@ -21,19 +21,19 @@
           -# =f.collection_select :type_id, Type.all, :id, :name, include_blank: true, class: 'form-control'
           =f.text_area :introduction
           =f.file_field :image
+          =f.fields_for :pictures do |field|
+            .js-form-group
+              =field.hidden_field :id
+              .row
+                .col-sm-6
+                  =field.file_field :picture
+          .form-group
+            %span.btn.btn-outline-info.btn-sm.js-add-form
+              %i.fa.fa-plus
+              %span="写真を追加"
           -# =f.collection_check_boxes :category_ids, Category.all, :id, :name, class: 'form-contral'
-          -# =f.fields_for :image do |field|
-          -#   .js-form-group
-          -#     =field.hidden_field :id
-          -#     .row
-          -#       .col-sm-6
-          -#         =field.file_field :menu
-          -# .form-group
-          -#   %span.btn.btn-outline-info.btn-sm.js-add-form
-          -#     %i.fa.fa-plus
-          -#     %span="写真を追加"
           .contact
             .php-email-form
               =f.submit '登録', class: 'button'
         %br
-        =link_to "Back to the list", root_path
+        =link_to "Back to the list", constructions_path

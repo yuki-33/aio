@@ -16,44 +16,60 @@
               079-299-5390
               %br/
               %strong Email:
-              info@example.com
+              aio.japan.oo@gmail.com
               %br/
             .social-links.mt-3
               %a.facebook{:href => "#"}
                 %i.bx.bxl-facebook
               %a.instagram{:href => "#"}
                 %i.bx.bxl-instagram
-        .col-lg-3.col-md-6.footer-links.ml-auto
+        .col-lg-2.col-md-6.footer-links
           %h4 Useful Links
           %ul
             %li
               %i.bx.bx-chevron-right
-              %a{:href => "#"} ホーム
+              = link_to 'ホーム', root_path
             %li
               %i.bx.bx-chevron-right
-              %a{:href => "#"} 会社案内
+              = link_to '会社案内', about_path
             %li
               %i.bx.bx-chevron-right
-              %a{:href => "#"} 施工事例
-        .col-lg-3.col-md-6.footer-links
-          %h4 　　
-          %ul
-            -# %li
-            -#   %i.bx.bx-chevron-right
-            -#   %a{:href => "#"} 業務内容
+              = link_to '施工事例', constructions_path
             %li
               %i.bx.bx-chevron-right
               = link_to '個人情報保護方針', privacy_path
             %li
               %i.bx.bx-chevron-right
               = link_to 'お問い合わせ', contact_path
+        .col-lg-3.col-md-6.footer-links
+          %h4 Links
+          %ul
+            %li
+              %i.bx.bx-chevron-right
+              = link_to 'フジモトコーポレーション', 'https://f-copo.com/'
+            %li
+              %i.bx.bx-chevron-right
+              = link_to '中村建築研究室 エヌラボ(n-lab)', 'https://n-lab.name/'
+            %li
+              %i.bx.bx-chevron-right
+              = link_to '永森建築事務所', 'https://ynagamo.com/'
+            %li
+              %i.bx.bx-chevron-right
+              = link_to '（有）エステートホームズ', 'http://www.estate-h.com/'
 
-        -# .col-lg-4.col-md-6.footer-newsletter
-        -#   %h4 Our Newsletter
-        -#   %p Tamen quem nulla quae legam multos aute sint culpa legam noster magna
-        -#   %form{:action => "", :method => "post"}
-        -#     %input{:name => "email", :type => "email"}/
-        -#     %input{:type => "submit", :value => "Subscribe"}/
+        .col-lg-3.col-md-6.footer-links.footer-newsletter
+          %h4 To Worker
+          %ul
+            -if user_signed_in?
+              %li
+                = link_to 'Logout', destroy_user_session_path
+            -else
+              %li
+                %i.bx.bx-walk
+                = link_to 'Login', new_user_session_path
+              %li
+                = link_to 'Sign In', new_user_registration_path
+
   .container
     .copyright
       \© Copyright

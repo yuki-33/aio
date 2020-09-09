@@ -135,12 +135,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #556270;
   transition: 0.3s;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #0000cd;
+  color: #4169e1;
 }
 
 .nav-menu .drop-down ul {
@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu .drop-down ul a {
   padding: 10px 20px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: none;
   color: #556270;
 }
@@ -235,6 +235,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .get-started-btn:hover {
   background: #4169e1;
+  // background: #e6636a;
   color: #fff;
 }
 
@@ -509,7 +510,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #df3740;
+  // background: #4169E1;
+  background: #e1444d;
+  text-decoration: none;
 }
 
 @media (max-width: 992px) {
@@ -648,6 +651,10 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+  color: #444444;
+}
+
 .about .content h2 {
   font-weight: 700;
   font-size: 40px;
@@ -677,7 +684,7 @@ section {
   top: 7px;
   position: absolute;
   font-size: 20px;
-  color: #0000cd;
+  color: #4169E1;
 }
 
 .about .content p:last-child {
@@ -750,7 +757,6 @@ section {
 
 .services .icon-box:hover h4 a {
   color: #0000cd;
-  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -884,6 +890,7 @@ section {
   padding: 30px;
   border-radius: 4px;
   background: white;
+  font-family: 'Osaka',sans-serif;
 }
 
 .team .member .pic {
@@ -906,7 +913,7 @@ section {
 
 .team .member h4 {
   font-weight: 700;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
   font-size: 20px;
   color: #556270;
 }
@@ -917,12 +924,14 @@ section {
   padding-bottom: 10px;
   position: relative;
   font-weight: 500;
+  color: #556270;
 }
 
 .team .member span::after {
   content: '';
   position: absolute;
   display: block;
+  margin: 5px 0;
   width: 50px;
   height: 1px;
   background: #dee2e6;
@@ -931,8 +940,9 @@ section {
 }
 
 .team .member p {
-  margin: 10px 0 0 0;
+  margin: 3px 0;
   font-size: 14px;
+  color: #444444;
 }
 
 .team .member .social {
@@ -1297,7 +1307,19 @@ section {
   font-size: 14px;
   color: #8795a4;
 }
+//add
+.contact .info a {
+  padding: 0 0 0 16px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #8795a4;
+}
 
+.contact .info:hover a {
+  color: #4169E1;
+  text-decoration: none;
+}
+//
 .contact .info .email, .contact .info .phone {
   margin-top: 40px;
 }
@@ -1427,7 +1449,8 @@ section {
 }
 
 .portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
-  margin-top: 5px;
+  // margin-top: 5px;
+  margin: 5px 0 40px 0;
   text-align: center;
 }
 
@@ -2076,6 +2099,8 @@ section {
   color: #fff;
   position: relative;
   padding-bottom: 12px;
+  padding-left: 5px;
+  text-align: left;
 }
 
 #footer .footer-top .footer-links {
@@ -2125,6 +2150,15 @@ section {
   padding: 6px 10px;
   position: relative;
   border-radius: 4px;
+}
+
+#footer .footer-top .footer-newsletter form input[type="email"] {
+  border: 0;
+  padding: 4px;
+  width: calc(100% - 110px);
+}
+#footer .footer-top .footer-newsletter {
+  text-align: left;
 }
 
 #footer .footer-top .footer-newsletter form input[type="email"] {

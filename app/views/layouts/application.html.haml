@@ -35,6 +35,20 @@
       \========================================================
   %body
     = render 'header'
+    / ======= Notice =======
+    -if notice.present?
+      #message.fixed-top
+        .container
+          %p.notice.alert.alert-dark{:role => "alert"}
+            =notice
+    -if notice.present?
+      .container.margin-30px-top
+        %p.notice.alert.alert-success{:role => "alert"}
+          =notice
+    -if alert.present?
+      .container.margin-30px-top
+        %p.alert.alert-danger{:role => "alert"}
+          =alert
     = yield
     = render 'footer'
     %a.back-to-top{:href => "#"}
