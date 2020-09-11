@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     post 'inquiry' => 'home#inquiry', on: :collection
   end
 
-  resources :constructions
+  resources :constructions, only: [:index, :show]
 
   namespace :login do
-    resource :constructions, only: [:create, :edit, :update]
+    resources :constructions, only: [:new, :create, :edit, :update]
   end
 
 end

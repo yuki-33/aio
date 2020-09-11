@@ -1,7 +1,17 @@
 class Construction < ApplicationRecord
   mount_uploader :image, ConstructionImageUploader
-  # validates :name, presence: true
-  # scope :by_year, ->{ order(built_year: :asc) }
-  has_many :pictures
-  accepts_nested_attributes_for :pictures
+  mount_uploader :image_2, ConstructionImageUploader
+  mount_uploader :image_3, ConstructionImageUploader
+  mount_uploader :image_4, ConstructionImageUploader
+  mount_uploader :image_5, ConstructionImageUploader
+  mount_uploader :image_6, ConstructionImageUploader
+  mount_uploader :image_7, ConstructionImageUploader
+  mount_uploader :image_8, ConstructionImageUploader
+  # mount_uploaders :picture, PictureUploader
+
+
+  validates :name, :area, :type, :built_year, :image, :image_2, :image_3, presence: true
+  # has_many :pictures, dependent: :destroy
+  # accepts_nested_attributes_for :pictures
+  belongs_to :type
 end

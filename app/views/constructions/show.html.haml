@@ -16,9 +16,9 @@
         .col-lg-8
           %h2.portfolio-title #{@construction.name}
           .owl-carousel.portfolio-details-carousel
-            %img{:alt => "", :src => "/img/fujimoto1.jpg"}/
-            %img{:alt => "", :src => "/img/fujimoto2.jpg"}/
-            %img{:alt => "", :src => "assets/img/portfolio/portfolio-details-3.jpg"}/
+            = image_tag @construction.image_url
+            = image_tag @construction.image_2_url
+            = image_tag @construction.image_3_url
         .col-lg-4.portfolio-info
           %h3 #{@construction.name}
           %ul
@@ -26,39 +26,38 @@
               %strong> 地域
               \　: #{@construction.area}
             %li
+              %strong> 設計
+              \　: #{@construction.design}
+            %li
               %strong> タイプ
-              \　: #{@construction.name}
+              \　: #{@construction.type.name}
             %li
               %strong> 竣工
               \　: #{@construction.built_year}
-            -# %li
-            -#   %strong> Project URL
-            -#   \:
-            -#   %a{:href => "#"} www.example.com
           %p
-            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            #{@construction.introduction}. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
     .portfolio
       .container
         .row.portfolio-container
-          -@construction.pictures.each do |picture|
-            .col-lg-4.col-md-6.portfolio-item.filter-app
+          -(2..8).each do |i|
+            .col-lg-4.col-md-6.portfolio-item.filter-card
               .portfolio-wrap
-                -# =image_tag picture.picture_url, class: 'img-fluid'
-                %img.img-fluid{:alt => "", :src => "/img/fujimoto1.jpg"}/
-
-
-
+                =image_tag @construction.try("image_#{i}_url"), class: 'img-fluid'
+                .portfolio-info
+                  .portfolio-links
+                    %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.try("image_#{i}_url")}
+                      %i.bx.bx-plus
 
   / End Portfolio Details Section
 
 %section#portfolio-details.portfolio-details
   .container
+    -if user_signed_in?
+      .row
+        .col-lg-12.back_to
+          = link_to edit_login_construction_path(@construction) do
+            %h3 EDIT
     .row
       .col-lg-12.back_to
         = link_to constructions_path do
-          %h3 BACK
--if user_signed_in?
-  %section#portfolio-details.portfolio-details
-    .container
-      .row
-        = link_to 'EDIT', edit_construction_path(@construction), class: 'bottun'
+          %h3 BACK TO THE LIST

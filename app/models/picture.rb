@@ -1,3 +1,4 @@
 class Picture < ApplicationRecord
-  belongs_to :construction
+  # mount_uploaders :picture, PictureUploader
+  # belongs_to :construction, optional: true
 end

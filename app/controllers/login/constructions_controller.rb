@@ -1,16 +1,8 @@
 class Login::ConstructionsController < Login::ApplicationController
-  before_action :set_shop, only: [:show, :edit, :update, :destroy]
-
-  def index
-    @constructions = Construction.all
-  end
-
-  def show
-  end
+  before_action :set_construction, only: [:show, :edit, :update, :destroy]
 
   def new
     @construction = Construction.new
-    @construction.pictures.build
   end
 
   def create
@@ -23,7 +15,6 @@ class Login::ConstructionsController < Login::ApplicationController
   end
 
   def edit
-    @construction.pictures.build if @construction.pictures.blank?
   end
 
   def update
@@ -49,13 +40,17 @@ class Login::ConstructionsController < Login::ApplicationController
       :name,
       :design,
       :area,
+      :type_id,
       :built_year,
       :introduction,
       :image,
-      pictures_attributes: [
-        :id,
-        :picture
-      ]
+      :image_2,
+      :image_3,
+      :image_4,
+      :image_5,
+      :image_6,
+      :image_7,
+      :image_8
     )
   end
 

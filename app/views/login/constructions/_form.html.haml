@@ -1,0 +1,60 @@
+/ ======= Form Section =======
+%section#contact.contact
+  .container
+    %div.privacy
+      =bootstrap_form_with model: [:login, @construction], local: true, multiple: true do |f|
+        =f.text_field :name
+        =f.text_field :design
+        =f.text_field :area
+        =f.text_field :built_year
+        =f.collection_select :type_id, Type.all, :id, :name, include_blank: true, class: 'form-control'
+        =f.text_area :introduction
+        =f.file_field :image
+        .row
+          .col-sm-6
+            =f.file_field :image_2
+          .col-sm-6
+            =f.file_field :image_3
+        .row
+          .col-sm-6
+            =f.file_field :image_4
+          .col-sm-6
+            =f.file_field :image_5
+        .row
+          .col-sm-6
+            =f.file_field :image_6
+          .col-sm-6
+            =f.file_field :image_7
+        .row
+          .col-sm-6
+            =f.file_field :image_8
+        -# =f.fields_for :pictures do |field|
+        -#   .js-form-group
+        -#     =field.hidden_field :id
+        -#     .row
+        -#       .col-sm-6
+        -#         =field.file_field :picture
+        -# .form-group
+        -#   %span.btn.btn-outline-info.btn-sm.js-add-form
+        -#     %i.fa.fa-plus
+        -#     %span="写真を追加"
+
+        .contact
+          .php-email-form
+            =f.submit 'Submit', class: 'button'
+        .contact
+          .php-email-form
+            =link_to "Back to the list", constructions_path, class: 'button'
+
+      -# -@construction.picture.each do |picture|
+      -#   = hidden_field :construction, :picture, multiple: true, value: picture.identifier
+      -# = form.file_field :picture, multiple: true
+        -# .field
+        -#   = f.label :title
+        -#   %br/
+        -#   = f.text_field :name
+        -# = f.fields_for :pictures do |p|
+        -#   .field
+        -#     = p.label :picture
+        -#     %br/
+        -#     = p.file_field :picture, :multiple => true, name: "pictures[picture][]"
