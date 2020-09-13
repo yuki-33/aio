@@ -19,9 +19,9 @@
         .col-lg-12.d-flex.justify-content-center
           %ul#portfolio-flters
             %li.filter-active{"data-filter" => "*"} All
-            %li{"data-filter" => ".filter-住宅"} 住宅
-            %li{"data-filter" => ".filter-店舗"} 店舗
-            %li{"data-filter" => ".filter-OTHER"} OTHER
+            %li{"data-filter" => ".filter-home"} 住宅
+            %li{"data-filter" => ".filter-shop"} 店舗
+            %li{"data-filter" => ".filter-other"} OTHER
       .row.portfolio-container
         -@constructions.each do |construction|
           -# .col-lg-4.col-md-6.portfolio-item.filter-card
