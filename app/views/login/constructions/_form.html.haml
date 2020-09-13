@@ -7,7 +7,11 @@
         =f.text_field :design
         =f.text_field :area
         =f.text_field :built_year
-        =f.collection_select :type_id, Type.all, :id, :name, include_blank: true, class: 'form-control'
+        .row
+          .col-sm-6
+            =f.collection_select :filter_id, Filter.all, :id, :name, include_blank: true, class: 'form-control'
+          .col-sm-6
+            =f.collection_select :type_id, Type.all, :id, :name, include_blank: true, class: 'form-control'
         =f.text_area :introduction
         =f.file_field :image
         .row
@@ -28,6 +32,7 @@
         .row
           .col-sm-6
             =f.file_field :image_8
+
         -# =f.fields_for :pictures do |field|
         -#   .js-form-group
         -#     =field.hidden_field :id

@@ -8,7 +8,6 @@
           %li
             %a{:href => "index.html"} Home
           %li 施工事例
-  / End Breadcrumbs
   / ======= Portfolio Details Section =======
   %section#portfolio-details.portfolio-details
     .container
@@ -36,82 +35,19 @@
               \　: #{@construction.built_year}
           %p
             #{@construction.introduction}. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-    -# .portfolio
-    -#   .container
-    -#     .row.portfolio-container
-    -#       .col-lg-4.col-md-6.portfolio-item.filter-card
-    -#         .portfolio-wrap
-    -#           =image_tag @construction.image_url, class: 'img-fluid'
-    -#           .portfolio-info
-    -#             .portfolio-links
-    -#               %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.image_url }
-    -#                 %i.bx.bx-plus
-    -#       .col-lg-4.col-md-6.portfolio-item.filter-card
-    -#         .portfolio-wrap
-    -#                       -if work.image.present?
-    -#           =image_tag @construction.image_2_url, class: 'img-fluid'
-    -#           .portfolio-info
-    -#             .portfolio-links
-    -#               %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.image_2_url }
-    -#                 %i.bx.bx-plus
-    -#       .col-lg-4.col-md-6.portfolio-item.filter-card
-    -#         .portfolio-wrap
-    -#           =image_tag @construction.image_3_url, class: 'img-fluid'
-    -#           .portfolio-info
-    -#             .portfolio-links
-    -#               %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.image_3_url }
-    -#                 %i.bx.bx-plus
-    -#       .col-lg-4.col-md-6.portfolio-item.filter-card
-    -#         .portfolio-wrap
-    -#           =image_tag @construction.image_4_url, class: 'img-fluid'
-    -#           .portfolio-info
-    -#             .portfolio-links
-    -#               %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.image_4_url }
-    -#                 %i.bx.bx-plus
-    -#       .col-lg-4.col-md-6.portfolio-item.filter-card
-    -#         .portfolio-wrap
-    -#           =image_tag @construction.image_5_url, class: 'img-fluid'
-    -#           .portfolio-info
-    -#             .portfolio-links
-    -#               %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.image_5_url }
-    -#                 %i.bx.bx-plus
-    -#       .col-lg-4.col-md-6.portfolio-item.filter-card
-    -#         .portfolio-wrap
-    -#           =image_tag @construction.image_6_url, class: 'img-fluid'
-    -#           .portfolio-info
-    -#             .portfolio-links
-    -#               %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.image_6_url }
-    -#                 %i.bx.bx-plus
-    -#       .col-lg-4.col-md-6.portfolio-item.filter-card
-    -#         .portfolio-wrap
-    -#           =image_tag @construction.image_7_url, class: 'img-fluid'
-    -#           .portfolio-info
-    -#             .portfolio-links
-    -#               %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.image_7_url }
-    -#                 %i.bx.bx-plus
-    -#       .col-lg-4.col-md-6.portfolio-item.filter-card
-    -#         .portfolio-wrap
-    -#           =image_tag @construction.image_8_url, class: 'img-fluid'
-    -#           .portfolio-info
-    -#             .portfolio-links
-    -#               %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.image_8_url }
-    -#                 %i.bx.bx-plus
-
     .portfolio
       .container
         .row.portfolio-container
           -(2..8).each do |i|
             .col-lg-4.col-md-6.portfolio-item.filter-card
               .portfolio-wrap
-                -if @construction."image_#{i}_url".present?
+                -if @construction.try("image_#{i}_url").present?
                   =image_tag @construction.try("image_#{i}_url"), class: 'img-fluid'
                   .portfolio-info
                     .portfolio-links
                       %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.try("image_#{i}_url")}
                         %i.bx.bx-plus
-
   / End Portfolio Details Section
-
 %section#portfolio-details.portfolio-details
   .container
     -if user_signed_in?

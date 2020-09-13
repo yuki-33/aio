@@ -14,4 +14,6 @@ class Construction < ApplicationRecord
   # has_many :pictures, dependent: :destroy
   # accepts_nested_attributes_for :pictures
   belongs_to :type
+  belongs_to :filter
+
 end

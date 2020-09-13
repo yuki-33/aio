@@ -7,7 +7,7 @@
         %ol
           %li
             %a{:href => "index.html"} Home
-          %li 施工事例
+          %li Works
   / End Breadcrumbs
   / ======= Portfolio Section =======
   %section#portfolio.portfolio
@@ -19,15 +19,16 @@
         .col-lg-12.d-flex.justify-content-center
           %ul#portfolio-flters
             %li.filter-active{"data-filter" => "*"} All
-            %li{"data-filter" => ".filter-app"} 住宅
-            %li{"data-filter" => ".filter-card"} デザイン
-            %li{"data-filter" => ".filter-web"} 店舗
+            %li{"data-filter" => ".filter-住宅"} 住宅
+            %li{"data-filter" => ".filter-店舗"} 店舗
+            %li{"data-filter" => ".filter-OTHER"} OTHER
       .row.portfolio-container
         -@constructions.each do |construction|
-          .col-lg-4.col-md-6.portfolio-item.filter-card
+          -# .col-lg-4.col-md-6.portfolio-item.filter-card
+          .col-lg-4.col-md-6.portfolio-item{class: "filter-#{construction.filter.name}"}
             .portfolio-wrap
-              =link_to construction_path(construction) do
-                =image_tag construction.image_url, class: 'img-fluid'
+              = link_to construction_path(construction) do
+                = image_tag construction.image_url, class: 'img-fluid'
               .portfolio-info
                 %p #{construction.name}
                 .portfolio-links
@@ -37,7 +38,22 @@
                   -#   %i.bx.bx-plus
                   -# %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => construction_path(construction), :title => "Portfolio Details"}
                   -#   %i.bx.bx-link
-  / End Portfolio Section
+      -# =paginate @constructions
+      .blog
+        .blog-pagination{"data-aos" => "fade-up"}
+          %ul.justify-content-center
+            %li.disabled
+              %i.bx.bxs-chevron-left
+            %li
+              %a{:href => "#"} 1
+            %li.active
+              %a{:href => "#"} 2
+            %li
+              %a{:href => "#"} 3
+            %li
+              %a{:href => "#"}
+                %i.bx.bxs-chevron-right
+    / End Portfolio Section
 / End #main
 -if user_signed_in?
   %section#portfolio-details.portfolio-details

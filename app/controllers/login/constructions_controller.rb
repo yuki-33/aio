@@ -3,6 +3,7 @@ class Login::ConstructionsController < Login::ApplicationController
 
   def new
     @construction = Construction.new
+    # @construction.pictures.build
   end
 
   def create
@@ -15,6 +16,7 @@ class Login::ConstructionsController < Login::ApplicationController
   end
 
   def edit
+    # @construction.pictures.build if @construction.pictures.blank?
   end
 
   def update
@@ -43,6 +45,7 @@ class Login::ConstructionsController < Login::ApplicationController
       :type_id,
       :built_year,
       :introduction,
+      :filter_id,
       :image,
       :image_2,
       :image_3,
@@ -51,6 +54,10 @@ class Login::ConstructionsController < Login::ApplicationController
       :image_6,
       :image_7,
       :image_8
+      # pictures_attributes: [
+      #   :id,
+      #   :pictures
+      # ]
     )
   end
 

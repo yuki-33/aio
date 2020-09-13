@@ -8,7 +8,8 @@
 require 'csv'
 require 'nkf'
 POSTGRES_TABLES = [
-  :types
+  :types,
+  :filters
 ]
 POSTGRES_TABLES.each do |table_name|
   next unless ActiveRecord::Base.connection.execute("select * from #{table_name};").num_tuples.zero?
