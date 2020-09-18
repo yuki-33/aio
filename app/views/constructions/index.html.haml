@@ -39,26 +39,26 @@
                   -# %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => construction_path(construction), :title => "Portfolio Details"}
                   -#   %i.bx.bx-link
       -# =paginate @constructions
-      .blog
-        .blog-pagination{"data-aos" => "fade-up"}
-          %ul.justify-content-center
-            %li.disabled
-              %i.bx.bxs-chevron-left
-            %li
-              %a{:href => "#"} 1
-            %li.active
-              %a{:href => "#"} 2
-            %li
-              %a{:href => "#"} 3
-            %li
-              %a{:href => "#"}
-                %i.bx.bxs-chevron-right
+      -# .blog
+      -#   .blog-pagination{"data-aos" => "fade-up"}
+      -#     %ul.justify-content-center
+      -#       %li.disabled
+      -#         %i.bx.bxs-chevron-left
+      -#       %li
+      -#         %a{:href => "#"} 1
+      -#       %li.active
+      -#         %a{:href => "#"} 2
+      -#       %li
+      -#         %a{:href => "#"} 3
+      -#       %li
+      -#         %a{:href => "#"}
+      -#           %i.bx.bxs-chevron-right
     / End Portfolio Section
 / End #main
--if user_signed_in?
+-if admin_signed_in?
   %section#portfolio-details.portfolio-details
     .container
       .row
         .col-lg-12.back_to
-          = link_to new_login_construction_path do
+          = link_to new_admin_construction_path do
             %h3 NEW

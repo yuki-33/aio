@@ -2,7 +2,7 @@
 %section#contact.contact
   .container
     %div.privacy
-      =bootstrap_form_with model: [:login, @construction], local: true, multiple: true do |f|
+      =bootstrap_form_with model: [:admin, @construction], local: true, multiple: true do |f|
         =f.text_field :name
         =f.text_field :design
         =f.text_field :area

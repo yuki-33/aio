@@ -83,8 +83,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-
-
 #header .logo a {
   color: #556270;
   text-decoration: none;
@@ -99,11 +97,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 5px 0 10px;
   // font-weight: 700;
   text-decoration: none;
+  text-align: center;
 }
 
-#header i.bx.bxs-phone {
-  margin-left: 5px;
-}
 
 @media (max-width: 992px) {
   #header {
@@ -211,6 +207,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 1366px) {
+  .nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+    padding: 12px 28px 12px 0;
+  }
+
   .nav-menu .drop-down .drop-down ul {
     left: -90%;
   }
@@ -2107,7 +2109,7 @@ section {
 
 #footer .footer-top .footer-links {
   margin-bottom: 30px;
-  text-align: left;
+
 }
 
 #footer .footer-top .footer-links ul {
@@ -2126,7 +2128,7 @@ section {
 #footer .footer-top .footer-links ul li {
   padding: 10px 0;
   display: flex;
-  align-items: center;
+  text-align: left;
 }
 
 #footer .footer-top .footer-links ul li:first-child {
@@ -2139,7 +2141,7 @@ section {
   display: inline-block;
   line-height: 1;
   text-decoration: none;
-
+  text-align: left;
 }
 
 #footer .footer-top .footer-links ul a:hover {
@@ -2208,4 +2210,10 @@ section {
 
 #footer .credits a:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  #footer .container {
+    text-align: left;
+  }
 }

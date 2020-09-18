@@ -60,15 +60,15 @@
         .col-lg-3.col-md-6.footer-links.footer-newsletter
           %h4 To Worker
           %ul
-            -if user_signed_in?
+            -if admin_signed_in?
               %li
-                = link_to 'Logout', destroy_user_session_path
+                = link_to 'Logout', destroy_admin_session_path
             -else
               %li
                 %i.bx.bx-walk
-                = link_to 'Login', new_user_session_path
-              %li
-                = link_to 'Sign In', new_user_registration_path
+                = link_to 'AIO. JAPANs', new_admin_session_path
+              -# %li
+              -#   = link_to 'Sign Up', new_admin_registration_path
 
   .container
     .copyright

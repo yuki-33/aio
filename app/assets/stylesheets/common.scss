@@ -1,4 +1,57 @@
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header .logo-h1 {
+  font-size: 28px;
+  margin: 0;
+  padding-left: 5px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  // text-align: center;
+}
+#header .logo-h1 a {
+  color: #556270;
+  text-decoration: none;
+}
+
+#header .contact-info {
+  align-items: center;
+}
+
+#header .contact-info a {
+  line-height: 1;
+  color: #556270;
+  text-decoration: none;
+  margin: 0;
+  transition: 0.3s;
+}
+
+#header .contact-info a:hover {
+  color: #e1444d;
+}
+
+#header .contact-info i {
+  color: #4169e1;
+  padding-right: 4px;
+}
+
+#header .contact-info i.bx.bxs-phone {
+  margin-left: 5px;
+}
+
+@media (max-width: 1366px) {
+  #header .contact-info {
+    padding-left: 30px;
+  }
+  #header .contact-info i.bx.bxs-envelope {
+    margin-left: 20px;
+  }
+  #header .contact-info i.bx.bxs-phone {
+    margin-left: 20px;
+  }
+}
+/*--------------------------------------------------------------
 # Message
 --------------------------------------------------------------*/
 #message {
@@ -37,7 +90,28 @@
 .privacy p {
   margin: 0;
 }
-
+@media (max-width: 768px) {
+  .privacy {
+    color: #556270;
+    // font-family: "Open Sans", sans-serif;
+    padding: 30px 30px 50px 30px;
+    margin: 0;
+  }
+  .privacy h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .privacy h5 {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    margin: 15px 0 5px 0;
+  }
+  .privacy p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
 /*--------------------------------------------------------------
 # Works
 --------------------------------------------------------------*/
@@ -116,7 +190,11 @@
   bottom: 0;
   left: 15px;
 }
-
+@media (max-width: 768px) {
+  .company .row p {
+    margin: 15px 0 0 0;
+  }
+}
 // #portfolio-details .container.margin-20 {
 //   margin: 20px 30;
 // }

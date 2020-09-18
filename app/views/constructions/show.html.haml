@@ -50,10 +50,10 @@
   / End Portfolio Details Section
 %section#portfolio-details.portfolio-details
   .container
-    -if user_signed_in?
+    -if admin_signed_in?
       .row
         .col-lg-12.back_to
-          = link_to edit_login_construction_path(@construction) do
+          = link_to edit_admin_construction_path(@construction) do
             %h3 EDIT
     .row
       .col-lg-12.back_to

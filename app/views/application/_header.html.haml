@@ -3,7 +3,7 @@
   .container.d-flex.align-items-center
     %a.logo{:href => root_path }
       %img.img-fluid{:alt => "", :src => "/img/aio_logo_s.png"}
-    %h1.logo
+    %h1.logo-h1
       = link_to 'AIO. JAPAN', root_path
     / Uncomment below if you prefer to use an image logo
     %nav.nav-menu.d-none.d-lg-block
@@ -18,7 +18,8 @@
           = link_to 'CONTACT', contact_path
     / .nav-menu
     -# %a.get-started-btn.ml-auto{:href => "index.html"} Get Started
-    %i.bx.bxs-envelope.margin-10px-right.ml-auto
-      = link_to "aio.japan.oo@gmail.com", "mailto:aio.japan.00@gmail.com"
-    %i.bx.bxs-phone
-      = link_to "08014406947", "tel:08014406947"
+    .contact-info.ml-auto.d-none.d-lg-block
+      %i.bx.bxs-envelope.margin-10px-right
+        = link_to "aio.japan.oo@gmail.com", "mailto:aio.japan.00@gmail.com"
+      %i.bx.bxs-phone
+        = link_to "08014406947", "tel:08014406947"

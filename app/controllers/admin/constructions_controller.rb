@@ -1,4 +1,4 @@
-class Login::ConstructionsController < Login::ApplicationController
+class Admin::ConstructionsController < Admin::ApplicationController
   before_action :set_construction, only: [:show, :edit, :update, :destroy]
 
   def new
