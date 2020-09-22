@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :constructions, only: [:index, :show]
 
   namespace :admin do
-    root to: 'home#index'
+    root to: 'constructions#new'
     resources :constructions
   end
 
