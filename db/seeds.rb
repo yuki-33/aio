@@ -7,16 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 require 'nkf'
-#
-# unless Admin.exists?
-#   Admin.find_or_create_by({email: 'aio.japan.oo@gmail.com'}) do |admin|
-#     admin.name = 'Admin'
-#     admin.role = 'master'
-#     admin.status = 'active'
-#     admin.password = 'aiojapan2020'
-#     admin.confirmed_at = DateTime.now
-#   end
-# end
 
 POSTGRES_TABLES = [
   :types,
