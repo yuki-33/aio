@@ -53,7 +53,9 @@ class Admin::ConstructionsController < Admin::ApplicationController
       :image_5,
       :image_6,
       :image_7,
-      :image_8
+      :image_8,
+      :image_9,
+      :image_10
       # pictures_attributes: [
       #   :id,
       #   :pictures

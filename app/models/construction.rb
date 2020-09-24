@@ -7,6 +7,8 @@ class Construction < ApplicationRecord
   mount_uploader :image_6, ConstructionImageUploader
   mount_uploader :image_7, ConstructionImageUploader
   mount_uploader :image_8, ConstructionImageUploader
+  mount_uploader :image_9, ConstructionImageUploader
+  mount_uploader :image_10, ConstructionImageUploader
   # mount_uploaders :picture, PictureUploader
 
 

@@ -34,11 +34,11 @@
               %strong> 竣工
               \　: #{@construction.built_year}
           %p
-            #{@construction.introduction}. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            #{@construction.introduction}
     .portfolio
       .container
         .row.portfolio-container
-          -(2..8).each do |i|
+          -(2..10).each do |i|
             .col-lg-4.col-md-6.portfolio-item.filter-card
               .portfolio-wrap
                 -if @construction.try("image_#{i}_url").present?
