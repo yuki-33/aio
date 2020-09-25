@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'constructions#new'
-    resources :constructions
+    resources :constructions, only: [:new, :create, :edit, :update, :delete]
   end
 
 end
