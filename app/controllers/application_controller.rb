@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   #herokuapp.comから独自ドメインへリダイレクト
   before_filter :ensure_domain
-  FQDN = 'www.aiojapanoo.net'
+  FQDN = 'www.aiojapanoo.com'
   #redirect correct server from herokuapp domain for SEO
   def ensure_domain
     return unless /\.herokuapp.com/ =~ request.host
