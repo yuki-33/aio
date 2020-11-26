@@ -62,6 +62,8 @@
           %ul
             -if admin_signed_in?
               %li
+                = link_to 'Add New Project',new_admin_construction_path
+              %li
                 = link_to 'Logout', destroy_admin_session_path
             -else
               %li
@@ -84,3 +86,5 @@
       Designed by
       %a{:href => "https://bootstrapmade.com/"} BootstrapMade
 / End Footer
+%a.back-to-top{:href => "#"}
+  %i.bx.bxs-chevron-up

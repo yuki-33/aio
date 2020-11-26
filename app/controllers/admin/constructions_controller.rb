@@ -28,6 +28,8 @@ class Admin::ConstructionsController < Admin::ApplicationController
   end
 
   def destroy
+    @construction.destroy
+    redirect_to constructions_path
   end
 
 

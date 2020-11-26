@@ -12,7 +12,7 @@ class Construction < ApplicationRecord
   # mount_uploaders :picture, PictureUploader
 
 
-  validates :name, :area, :type, :built_year, :image, :image_2, :image_3, presence: true
+  validates :name, :design, :area, :type, :built_year, :filter, :type, :image, :image_2, :image_3, presence: true
   # has_many :pictures, dependent: :destroy
   # accepts_nested_attributes_for :pictures
   belongs_to :type

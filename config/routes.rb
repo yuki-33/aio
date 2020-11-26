@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'home#index'
-    resources :constructions, only: [:new, :create, :edit, :update, :delete]
+    resources :constructions, only: [:new, :create, :edit, :update, :destroy]
   end
 
 end

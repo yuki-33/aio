@@ -11,7 +11,8 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag '/app/assets/javascripts/application' ,'data-turbolinks-track': 'reload'
+    -# = javascript_include_tag '/app/assets/javascripts/application' ,'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     / Favicons
     -# %link{:href => "assets/img/favicon.png", :rel => "icon"}/
     %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
@@ -43,18 +44,12 @@
         .container
           %p.notice.alert.alert-dark{:role => "alert"}
             =notice
-    -if notice.present?
-      .container.margin-30px-top
-        %p.notice.alert.alert-success{:role => "alert"}
-          =notice
-    -if alert.present?
-      .container.margin-30px-top
-        %p.alert.alert-danger{:role => "alert"}
-          =alert
+    -# -if alert.present?
+    -#   .container.margin-30px-top
+    -#     %p.alert.alert-danger{:role => "alert"}
+    -#       =alert
     = yield
     = render 'footer'
-    %a.back-to-top{:href => "#"}
-      %i.bx.bxs-chevron-up
     / Vendor JS Files
     = javascript_include_tag "application"
     -# %script{:src => "assets/vendor/jquery/jquery.min.js"}
