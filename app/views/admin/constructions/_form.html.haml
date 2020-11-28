@@ -1,7 +1,8 @@
 / ======= Form Section =======
 %section#contact.contact
   .container
-    %div.privacy
+    %div.form-box
+      %p.alert-text 【お願い】NameからImage3までは必ず入力して下さい。
       =bootstrap_form_with model: [:admin, @construction], local: true, multiple: true do |f|
         =f.text_field :name
         =f.text_field :design
@@ -14,30 +15,92 @@
             =f.collection_select :type_id, Type.all, :id, :name, include_blank: true, class: 'form-control'
         =f.text_area :introduction
         =f.file_field :image
-        .row
+        =f.hidden_field :image_cache
+        -if @construction.image.present?
+          .row.mb-2
+            .col-lg-4.col-md-6
+              =image_tag @construction.image_url(:thumb)
+        .row.mt-2
           .col-sm-6
             =f.file_field :image_2
+            -if @construction.image_2.present?
+              .row.mb-2
+                .col-lg-4.col-md-6
+                  =image_tag @construction.image_2_url(:thumb)
           .col-sm-6
             =f.file_field :image_3
+            -if @construction.image_3.present?
+              .row.mb-2
+                .col-lg-4.col-md-6
+                  =image_tag @construction.image_3_url(:thumb)
         .row
           .col-sm-6
             =f.file_field :image_4
+            -if @construction.image_4.present?
+              .row
+                .col-lg-4.col-md-6
+                  =image_tag @construction.image_4_url(:thumb)
+                  .checkbox.checkbox-primary
+                    =f.check_box_without_bootstrap :remove_image_4
+                    =f.label :remove_image, 'Image Delete'
           .col-sm-6
             =f.file_field :image_5
+            -if @construction.image_5.present?
+              .row
+                .col-lg-4.col-md-6
+                  =image_tag @construction.image_5_url(:thumb)
+                  .checkbox.checkbox-primary
+                    =f.check_box_without_bootstrap :remove_image_5
+                    =f.label :remove_image, 'Image Delete'
         .row
           .col-sm-6
             =f.file_field :image_6
+            -if @construction.image_6.present?
+              .row
+                .col-lg-4.col-md-6
+                  =image_tag @construction.image_6_url(:thumb)
+                  .checkbox.checkbox-primary
+                    =f.check_box_without_bootstrap :remove_image_6
+                    =f.label :remove_image, 'Image Delete'
           .col-sm-6
             =f.file_field :image_7
+            -if @construction.image_7.present?
+              .row
+                .col-lg-4.col-md-6
+                  =image_tag @construction.image_7_url(:thumb)
+                  .checkbox.checkbox-primary
+                    =f.check_box_without_bootstrap :remove_image_7
+                    =f.label :remove_image, 'Image Delete'
         .row
           .col-sm-6
             =f.file_field :image_8
+            -if @construction.image_8.present?
+              .row
+                .col-lg-4.col-md-6
+                  =image_tag @construction.image_8_url(:thumb)
+                  .checkbox.checkbox-primary
+                    =f.check_box_without_bootstrap :remove_image_8
+                    =f.label :remove_image, 'Image Delete'
+
           .col-sm-6
             =f.file_field :image_9
+            -if @construction.image_9.present?
+              .row
+                .col-lg-4.col-md-6
+                  =image_tag @construction.image_9_url(:thumb)
+                  .checkbox.checkbox-primary
+                    =f.check_box_without_bootstrap :remove_image_9
+                    =f.label :remove_image, 'Image Delete'
         .row
           .col-sm-6
             =f.file_field :image_10
-
+            -if @construction.image_10.present?
+              .row
+                .col-lg-4.col-md-6
+                  =image_tag @construction.image_10_url(:thumb)
+                  .checkbox.checkbox-primary
+                    =f.check_box_without_bootstrap :remove_image_10
+                    =f.label :remove_image, 'Image Delete'
         -# =f.fields_for :pictures do |field|
         -#   .js-form-group
         -#     =field.hidden_field :id
@@ -52,9 +115,8 @@
         .contact
           .php-email-form
             =f.submit 'Submit', class: 'button'
-        .contact
-          .php-email-form
-            =link_to "Back to the list", constructions_path, class: 'button'
+          .php-email-form.text-center
+            =link_to "Back to the list", constructions_path, class: 'btn'
 
       -# -@construction.picture.each do |picture|
       -#   = hidden_field :construction, :picture, multiple: true, value: picture.identifier

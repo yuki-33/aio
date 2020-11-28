@@ -57,7 +57,17 @@ class Admin::ConstructionsController < Admin::ApplicationController
       :image_7,
       :image_8,
       :image_9,
-      :image_10
+      :image_10,
+      # :remove_image,
+      # :remove_image_2,
+      # :remove_image_3,
+      :remove_image_4,
+      :remove_image_5,
+      :remove_image_6,
+      :remove_image_7,
+      :remove_image_8,
+      :remove_image_9,
+      :remove_image_10
       # pictures_attributes: [
       #   :id,
       #   :pictures

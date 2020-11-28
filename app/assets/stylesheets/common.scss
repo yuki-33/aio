@@ -1,3 +1,26 @@
+.alert-text {
+  color: rgb(220,20,60);
+}
+
+.btn {
+  margin: auto;
+  margin: 10px 0;
+  padding: 10px 24px;
+  /* background-color: #0000cd; */
+  color: #0000cd;
+  border-radius: 4px;
+  border: solid 1px #0000cd;
+  /* border: double 5px #0000cd; */
+  /* box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); */
+  transition: 0.4s;
+}
+
+.btn:hover {
+  color: #007bff;
+  border: solid 1px #007bff;
+}
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -214,8 +237,20 @@
   position: relative;
   font-family: "Poppins", sans-serif;
 }
+/*--------------------------------------------------------------
+# Form
+--------------------------------------------------------------*/
+.form-box {
+  color: #556270;
+  // font-family: "Open Sans", sans-serif;
+  padding: 50px 70px;
+  margin: 0 40px ;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
 
-
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 .footer-info a {
   color: #ffffff;
   text-decoration: none;

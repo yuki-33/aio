@@ -38,6 +38,13 @@
     .portfolio
       .container
         .row.portfolio-container
+          .col-lg-4.col-md-6.portfolio-item.filter-card
+            .portfolio-wrap
+              =image_tag @construction.image_url, class: 'img-fluid'
+              .portfolio-info
+                .portfolio-links
+                  %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.image_url}
+                    %i.bx.bx-plus
           -(2..10).each do |i|
             .col-lg-4.col-md-6.portfolio-item.filter-card
               .portfolio-wrap

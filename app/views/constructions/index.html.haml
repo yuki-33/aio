@@ -57,9 +57,9 @@
     / End Portfolio Section
 / End #main
 -if admin_signed_in?
-  %section#portfolio-details.portfolio-details
+  %section.portfolio-details
     .container
       .row
         .col-lg-12.back_to
-          = link_to new_admin_construction_path do
-            %h3 NEW
+          %h3
+            = link_to 'ADD NEW PROJECT', new_admin_construction_path
