@@ -255,10 +255,11 @@
 }
 
 .construction .btn-box.btn-edit {
-  background-color: #e6636a;
+  border: solid 1px #e6636a;
+  color: #e6636a;
 }
 .construction .btn-box.btn-edit:hover {
-  background-color: #FDA6C2;
+  background-color: #e6636a;
   color: #fff;
 }
 .construction .btn-box.btn-delete {
