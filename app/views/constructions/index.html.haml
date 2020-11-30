@@ -28,17 +28,12 @@
           -# .col-lg-4.col-md-6.portfolio-item.filter-card
           .col-lg-4.col-md-6.portfolio-item{class: "filter-#{construction.filter.name}"}
             .portfolio-wrap
-              = link_to construction_path(construction) do
-                = image_tag construction.image_url, class: 'img-fluid'
+              = image_tag construction.image_url, class: 'img-fluid'
               .portfolio-info
                 %p #{construction.name}
                 .portfolio-links
                   = link_to construction_path(construction) do
                     %i.bx.bx-link
-                  -# %a.venobox{"data-gall" => "portfolioGallery", :href => "assets/img/portfolio/portfolio-1.jpg", :title => "App 1"}
-                  -#   %i.bx.bx-plus
-                  -# %a.venobox{"data-gall" => "portfolioDetailsGallery", "data-vbtype" => "iframe", :href => construction_path(construction), :title => "Portfolio Details"}
-                  -#   %i.bx.bx-link
       -# =paginate @constructions
       -# .blog
       -#   .blog-pagination{"data-aos" => "fade-up"}
@@ -57,9 +52,8 @@
     / End Portfolio Section
 / End #main
 -if admin_signed_in?
-  %section.portfolio-details
+  %section
     .container
       .row
-        .col-lg-12.back_to
-          %h3
-            = link_to 'ADD NEW PROJECT', new_admin_construction_path
+        .col-lg-12.construction.mb-5
+          = link_to 'ADD NEW PROJECT', new_admin_construction_path, class: 'btn-box btn-new'

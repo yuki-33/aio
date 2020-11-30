@@ -54,20 +54,14 @@
                     .portfolio-links
                       %a.venobox{"data-gall" => "portfolioGallery", :href => @construction.try("image_#{i}_url")}
                         %i.bx.bx-plus
-  / End Portfolio Details Section
-%section#portfolio-details.portfolio-details
-  .container
-    -if admin_signed_in?
+    .container.mt-5
+      -if admin_signed_in?
+        .row
+          .col-6.construction
+            = link_to 'EDIT THIS PROJECT', edit_admin_construction_path(@construction), class: 'btn-box btn-edit'
+          .col-6.construction.text-right
+            = link_to 'DELETE', admin_construction_path(@construction), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn-box btn-delete'
       .row
-        .col-lg-12.back_to
-          %h3
-            = link_to 'EDIT', edit_admin_construction_path(@construction)
-      .row
-        .col-lg-12.back_to
-          %h3
-            = link_to 'DELETE', admin_construction_path(@construction), method: :delete, data: {confirm: "Are you sure?"}
-
-    .row
-      .col-lg-12.back_to
-        = link_to constructions_path do
-          %h3 BACK TO THE LIST
+        .col-lg-12.construction
+          %p.mt-5.ml-2
+            =link_to 'BACK TO THE LIST', constructions_path
